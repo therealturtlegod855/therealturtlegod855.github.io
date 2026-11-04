@@ -56,15 +56,36 @@
 <body>
 
 <div class="container">
+    <!-- Applet 1: Minesweeper Logic Status Board -->
     <div class="applet-wrapper">
         <!-- 
           code: Specifies the entry point class name.
           archive: Points to the compiled JAR package stored in your repository.
         -->
-        <applet codebase="https://therealturtlegod855.github.io/interactivenhd" code="MinesweeperApplet.class" archive="InteractiveProgram.jar" width="450" height="150">
+        <applet codebase="https://github.io" code="MinesweeperApplet.class" archive="InteractiveProgram.jar" width="450" height="150">
             <div style="padding: 20px; color: #cb2431; font-weight: bold;">
                 <span style="font-size: 13px; font-weight: normal; color: #586069;">
                     There is a lot of cool stuff happening here! Happy to be part of it.
+                </span>
+            </div>
+        </applet>
+    </div>
+
+    <!-- Applet 2: Minecraft Classic Integration -->
+    <!-- This section loads dynamically under Java environments but falls back invisibly on modern browsers -->
+    <div class="applet-wrapper" style="display: block;">
+        <applet codebase="https://therealturtlegod855.github.io/interactivenhd" 
+                code="com.mojang.minecraft.MinecraftApplet.class" 
+                archive="minecraft_classic.jar" 
+                width="450" 
+                height="300">
+            <param name="username" value="aturtlegod">
+            <param name="sessionid" value="0">
+            <param name="fullscreen" value="false">
+            <!-- Fallback design mimics your clean text message layout for standard web viewports -->
+            <div style="padding: 20px; color: #cb2431; font-weight: bold;">
+                <span style="font-size: 13px; font-weight: normal; color: #586069;">
+                    Minecraft instance successfully embedded! Sourcing execution pipelines.
                 </span>
             </div>
         </applet>
